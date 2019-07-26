@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button
+          [text]="buttonText"
+          [icon]="buttonIcon">
+      </ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card class="welcome-card">
+    <form (ngSubmit)="salvar()">
+    <div>
+      <h1>Usuários:</h1>
+      <ion-input type="text" [(ngModel)]="user.username" name="user.username" placeholder="Digite o nome"></ion-input>
+      <ion-input type="password" [(ngModel)]="user.password" name="user.password" placeholder="Digite a senha"></ion-input>
+  
+      <ion-button type="submit" color="primary">Enviar</ion-button>
+    </div>
+  </form>
+  </ion-card>
+</ion-content>

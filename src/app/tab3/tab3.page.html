@@ -1,9 +1,32 @@
 <ion-header>
   <ion-toolbar>
     <ion-title>
-      Tab Three
+      Cadastro
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content></ion-content>
+<ion-content>
+  <ion-card class="welcome-card">
+  <div>
+    <h1>Usuários:</h1>
+    <ion-input type="text" [(ngModel)]="username" placeholder="Digite o nome"></ion-input>
+    <ion-input type="password" [(ngModel)]="password" placeholder="Digite a senha"></ion-input>
+
+    <ion-button color="primary" (click)="salvar()">Enviar</ion-button>
+  </div>
+</ion-card>
+<ion-card class="welcome-card">
+  <div>
+    <h1>Produtos:</h1>
+    <ion-input type="text" [(ngModel)]="productName" placeholder="Digite o nome"></ion-input>
+    <ion-input type="text" [(ngModel)]="englishName" placeholder="Digite o nome inglês"></ion-input>
+    <ion-input type="text" [(ngModel)]="description" placeholder="Digite a descrição"></ion-input>
+    <ion-input type="text" [(ngModel)]="price" placeholder="Digite o valor"></ion-input>
+    <ion-input type="text" [(ngModel)]="quantity" placeholder="Digite a quantidade"></ion-input>
+    <ion-input type="text" [(ngModel)]="unity" placeholder="Digite a unidade"></ion-input>
+
+    <ion-button color="primary" (click)="salvar()">Enviar</ion-button>
+  </div>
+</ion-card>  
+</ion-content>

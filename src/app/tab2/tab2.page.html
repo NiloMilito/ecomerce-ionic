@@ -1,9 +1,26 @@
 <ion-header>
   <ion-toolbar>
     <ion-title>
-      Tab Two
+      Usuários
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content></ion-content>
+<ion-content>
+  <ion-fab vertical="top" horizontal="end" slot="fixed">
+    <ion-fab-button [routerLink] ="['/cadastro2']">
+      <ion-icon name="add"></ion-icon>       
+    </ion-fab-button>
+  </ion-fab>
+  <ion-card class="welcome-card">
+    <ion-card-header>
+      <ion-card-title>Usuários</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <div *ngFor="let user of users">
+        <p><b>Nome :</b>{{ user?.username }}&nbsp; 
+          <b>Situação :</b>{{ user?.isActive == true ? 'Ativo' : 'Inativo' }}</p>
+      </div>
+  </ion-card-content>
+  </ion-card>
+</ion-content>

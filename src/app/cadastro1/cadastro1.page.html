@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-back-button
+            [text]="buttonText"
+            [icon]="buttonIcon">
+        </ion-back-button>
+      </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+      <ion-card class="welcome-card">
+        <div>
+          <form (ngSubmit)= "salvar()">
+            <h1>Produto:</h1>
+            <ion-input type="text" [(ngModel)]="produto.productName" name="produto.productName" placeholder="Digite o nome"></ion-input>
+            <ion-input type="text" [(ngModel)]="produto.englishName" name="produto.englishName" placeholder="Digite o nome inglês"></ion-input>
+            <ion-input type="text" [(ngModel)]="produto.description" name="produto.description" placeholder="Digite a descrição"></ion-input>
+            <ion-input type="number" [(ngModel)]="produto.price" name="produto.price" placeholder="Digite o valor"></ion-input>
+            <ion-input type="number" [(ngModel)]="produto.quantity" name="produto.quantity" placeholder="Digite a quantidade"></ion-input>
+            <ion-input type="text" [(ngModel)]="produto.unity" name="produto.unity" placeholder="Digite a unidade"></ion-input>
+      
+          <ion-button type="submit" color="primary">Enviar</ion-button> 
+        </form>
+        </div>
+      </ion-card>  
+</ion-content>
